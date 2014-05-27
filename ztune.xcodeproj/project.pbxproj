@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF8F846319349DB2006CC7FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8F846219349DB2006CC7FC /* Images.xcassets */; };
 		CFB1ABAB17E613340049C773 /* Custom.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB1AB9E17E613340049C773 /* Custom.png */; };
 		CFB1ABAC17E613340049C773 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB1AB9F17E613340049C773 /* Icon-72.png */; };
 		CFB1ABAD17E613340049C773 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB1ABA017E613340049C773 /* Icon-72@2x.png */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF8F846219349DB2006CC7FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CFB1AB9E17E613340049C773 /* Custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Custom.png; sourceTree = "<group>"; };
 		CFB1AB9F17E613340049C773 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		CFB1ABA017E613340049C773 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				CFB1AB8D17E610040049C773 /* classes */,
 				CFB1AB9017E610A30049C773 /* resources */,
+				CF8F846219349DB2006CC7FC /* Images.xcassets */,
 				CFF9737A17E50CA1002293B2 /* Supporting Files */,
 			);
 			path = ztune;
@@ -255,6 +258,7 @@
 				CFF9736C17E50CA1002293B2 /* Sources */,
 				CFF9736D17E50CA1002293B2 /* Frameworks */,
 				CFF9736E17E50CA1002293B2 /* Resources */,
+				CF1E84B7193393D700148DAF /* Run Script - Update Current Project Version */,
 			);
 			buildRules = (
 			);
@@ -327,6 +331,7 @@
 				CFB1ABAF17E613340049C773 /* Icon-Small-50@2x.png in Resources */,
 				CFB1ABB017E613340049C773 /* Icon-Small.png in Resources */,
 				CFB1ABB117E613340049C773 /* Icon-Small@2x.png in Resources */,
+				CF8F846319349DB2006CC7FC /* Images.xcassets in Resources */,
 				CFB1ABB217E613340049C773 /* Icon.png in Resources */,
 				CFB1ABB317E613340049C773 /* Icon@2x.png in Resources */,
 				CFB1ABB517E613340049C773 /* iTunesArtwork.png in Resources */,
@@ -346,6 +351,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CF1E84B7193393D700148DAF /* Run Script - Update Current Project Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Update Current Project Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${DEVELOPER_BIN_DIR}/agvtool\" next-version -all    ";
+		};
 		CFF9738E17E50CA2002293B2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +442,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -455,6 +475,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -470,6 +491,8 @@
 		CFF973A317E50CA2002293B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ztune/ztune-Prefix.pch";
 				INFOPLIST_FILE = "ztune/ztune-Info.plist";
@@ -481,6 +504,8 @@
 		CFF973A417E50CA2002293B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ztune/ztune-Prefix.pch";
 				INFOPLIST_FILE = "ztune/ztune-Info.plist";
